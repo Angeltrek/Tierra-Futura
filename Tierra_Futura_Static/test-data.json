@@ -1,0 +1,42 @@
+{
+  "id": "18-02-2024",
+  "planting_date": "18-09-2023",
+  "expected_harvest_date": "28-02-2023",
+  "expected_tons": 3,
+  "user_rating": 4.4,
+  "system_rating": 3.2,
+  "status": "warning",
+  "trouble": "possible pest",
+  "actions": [
+    {
+      "name": "to sow",
+      "resources": [
+        {
+          "name": "water",
+          "value": 33.2,
+          "cost": 123.52
+        },
+        {
+          "name": "fertilizer",
+          "value": 12.3,
+          "cost": 252.52
+        }
+      ]
+    },
+    {
+      "name": "to water",
+      "resources": [
+        {
+          "name": "water",
+          "value": 53.2,
+          "cost": 55.63
+        },
+        {
+          "name": "water",
+          "value": 22.1,
+          "cost": 173.42
+        }
+      ]
+    }
+  ]
+}

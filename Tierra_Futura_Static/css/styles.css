@@ -1,0 +1,326 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Estilos generales para los inputs */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+/* Estilos para los inputs cuando están enfocados */
+input:focus,
+textarea:focus {
+  outline: none; /* Evita el contorno por defecto del navegador */
+  border-color: #007bff; /* Cambia el color del borde al enfocar */
+}
+
+/* Estilos para los inputs de tipo 'checkbox' y 'radio' */
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: 5px; /* Ajusta el margen entre el input y el texto */
+}
+
+/* Estilos para los botones de tipo 'submit' */
+input[type="submit"],
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Cambia el estilo del cursor cuando se pasa sobre el botón */
+input[type="submit"]:hover,
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos para los select */
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+  appearance: none; /* Elimina el estilo nativo del sistema operativo */
+  background-image: url('data:image/svg+xml;utf8,<svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>'); /* Añade una flecha personalizada */
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+
+/* Estilos para los inputs de tipo date */
+input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+/* Estilos para los inputs de tipo date en navegadores que no admiten 'type="date"' */
+input[type="text"][type="date"] {
+  appearance: none; /* Elimina el estilo nativo del sistema operativo */
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>'); /* Añade una flecha personalizada */
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+
+:root {
+  --dark-grey: #555;
+  --green-warning-color: #34e569;
+  --red-warning-color: #fa6161;
+}
+
+.register-card {
+  border-radius: 1rem;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.2);
+  min-width: 350px;
+  margin: auto; /* Añadido */
+  padding: 1rem; /* Añadido */
+}
+
+.register-header {
+  border-bottom: 1px solid var(--dark-grey);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+.register-header-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-gap: 20px;
+}
+
+.register-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.geographic-info {
+  margin: 1rem auto;
+  width: 80%;
+}
+
+.resource-info {
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem auto;
+  width: 80%;
+}
+
+.resource-list {
+  background: #fdf9f9;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+  list-style: none;
+  overflow-y: scroll;
+  max-height: 250px;
+  width: 100%;
+}
+
+.resource {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  width: 90%; /* Añadido */
+}
+
+.resource-header {
+  justify-content: space-between;
+  display: flex;
+  padding: 0.5rem 0;
+  width: 100%; /* Corregido */
+}
+
+.resource-content {
+  border-top: 1px solid var(--dark-grey);
+  padding: 0.5rem 0;
+  width: 100%; /* Corregido */
+}
+
+.action-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+  list-style: none;
+  max-height: 350px;
+  overflow-y: scroll;
+  width: 100%;
+}
+
+.action {
+  width: 80%;
+  margin: auto;
+}
+
+.action-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  width: 100%;
+}
+
+.action-content {
+  background: #fdf9f9;
+  display: grid;
+  grid-gap: 20px;
+  list-style: none;
+  max-height: 250px;
+  overflow-y: scroll;
+}
+
+.action-form {
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 80%;
+}
+
+.action-form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0;
+}
+
+.resource-field {
+  border: 1px solid var(--dark-grey);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem 0;
+  padding: 1rem;
+}
+
+.register-list {
+  background: #fdf9f9;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+  list-style: none;
+  overflow-y: scroll;
+  margin: auto;
+  max-height: 250px;
+  width: 80%;
+}
+
+.register {
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+.register-ratings {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-ratings > * {
+  margin-bottom: 0.5rem;
+}
+
+.register-ratings input {
+  margin-right: 1rem;
+  width: 50px;
+}
+
+.register-form {
+  border: 1px solid var(--dark-grey); /* Corregido */
+  border-radius: 1rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: 1rem;
+  width: 80%;
+}
+
+.button {
+  background: rgb(235, 227, 227);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0 0.5rem;
+  height: 1.5rem;
+  cursor: pointer; /* Cambio: Mover cursor aquí */
+}
+
+.button:hover {
+  background: #fff;
+}
+
+/* Estilo general para el scrollbar */
+::-webkit-scrollbar {
+  width: 10px; /* Ancho del scrollbar */
+}
+
+/* Estilo del riel del scrollbar (pista) */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color de fondo del riel del scrollbar */
+}
+
+/* Estilo del pulgar del scrollbar (barra deslizante) */
+::-webkit-scrollbar-thumb {
+  background: #888; /* Color del pulgar del scrollbar */
+  border-radius: 5px; /* Radio de borde del pulgar del scrollbar */
+}
+
+/* Estilo del pulgar del scrollbar cuando se está moviendo */
+::-webkit-scrollbar-thumb:hover {
+  background: var(
+    --dark-grey
+  ); /* Color del pulgar del scrollbar cuando se está moviendo */
+}
+
+/* Estilos de las alertas */
+.warning {
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  padding: 0.2rem;
+  text-align: center;
+}
+
+.green-warning {
+  background: var(--green-warning-color);
+}
+
+.red-warning {
+  background: var(--red-warning-color);
+  color: #fff;
+}
